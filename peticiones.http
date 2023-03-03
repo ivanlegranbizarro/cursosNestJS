@@ -16,5 +16,13 @@ Accept: application/json
   "url": "http://www.youtube.com/watch?v=1234567890"
 }
 ###
+POST http://localhost:3000/v1/courses
+Content-Type: application/json
+Accept: application/json
 
-
+{
+  # "title": "My first course",
+  # "description": "This is a description",
+  # "cover": "http://www.youtube.com/watch?v=1234567890",
+  # "price": 9.99
+}
