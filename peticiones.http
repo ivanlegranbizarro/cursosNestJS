@@ -6,5 +6,15 @@ GET http://localhost:3000/videos/1
 Content-Type: application/json
 Accept: application/json
 ###
+POST http://localhost:3000/videos
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "My first video",
+  "description": "This is a description",
+  "url": "http://www.youtube.com/watch?v=1234567890"
+}
+###
 
 
