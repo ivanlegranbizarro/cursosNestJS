@@ -26,3 +26,7 @@ Accept: application/json
   # "cover": "http://www.youtube.com/watch?v=1234567890",
   # "price": 9.99
 }
+###
+GET http://localhost:3000/v1/courses/1
+Content-Type: application/json
+Accept: application/json
