@@ -1,10 +1,14 @@
-import { ValidationPipe } from '@nestjs/common';
+import { ValidationPipe, VersioningType } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, { cors: true });
+  app.enableVersioning({
+    defaultVersion: '1',
+    type: VersioningType.URI,
+  });
   const config = new DocumentBuilder()
     .addBearerAuth()
     .setTitle('NestJS API Documentation')
